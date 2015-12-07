@@ -1,0 +1,41 @@
+﻿/********************************************************\
+*							 *
+*	CAHIER DES CHARGES FaitesUnVoeu (FUV)		 *
+*							 *
+\********************************************************/
+			
+1. Contexte
+Actuellement, de nombreux sites de fabrication de cartes de voeux se multiplient sur le Web, le plus connu étant évidemment VistaPrint.
+Le nombre de naissances étant actuellement en hausse, il serait assez judicieux de se lancer dans ce type de service.
+
+2. Objectifs
+Le site FUV permettra:
+- de concevoir sa propre carte de voeux (naissance, mariage, anniversaire, etc.) de façon simple et intuitive via des modèles
+- de personnaliser au maximum ses cartes
+- de les expédier à une adresse précise
+
+3. Périmètre
+Cet outil est destiné à tout internaute souhaitant envoyer une carte de voeux à une de ses connaissances.
+
+4. Description fonctionnelle
+L'internaute s'authentifie/s'inscrit afin de créer ses cartes.
+Une fois l'authentification réussie:
+- L'internaute peut créer sa carte, la sauvegarder pour plus tard, la charger ou la supprimer
+- Dès que c'est fini, il renseigne l'adresse du destinataire
+- Le prix du service s'affiche, différent en fonction du type de carte et de sa "formule" (classique, XL, etc.)
+- La carte est livrée
+
+5. Equipe
+Cet outil sera développé sur le serveur web WF3 par 4 personnes. A savoir:
+- ANTOINE Sylvain
+- CHERFI Ali [HTML ; CSS]
+- HOURLIER Florian [JS ; Charte graphique]
+- NICE Rémy [PHP ; SQL]
+La répartition est faite ainsi, mais tout le monde peut travailler sur tout, en fonction de ses points forts.
+
+6. Calendrier
+Le commencement du projet est envisagé pour le 7 Décembre.
+La finalisation du projet est prévue pour le 29 Décembre 2015, jour de l'oral.
+
+7. Clause juridique
+L'école de Hirson s'appropriera l'ensemble des droits pendant la phase de développement et les restituera à WF3 à la date de finalisation.
