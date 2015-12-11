@@ -1,0 +1,124 @@
+body
+{
+	background-color:#EDABB7;
+	margin: 0;
+}
+label
+{
+	display:none;
+}
+header
+{
+	height: 100px;
+	background-color:#d9edf7; /*#F099C4*/
+	font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+header p
+{
+	margin: 0;
+}
+li
+{
+	text-decoration: none;
+	display: inline-block;
+    padding: 10px;
+}
+.bienvenue
+{
+	background-color: gray;
+	width: 400px;
+	margin: auto;
+}
+
+input [type=radio]
+{
+	display:none;
+}
+
+.selected
+{
+	background-color:#000;
+}
+
+.carte
+{
+	padding:5px;
+}
+
+.carte:hover
+{
+	background-color:#AAA;
+}
+
+.carte > .row > img 
+{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.portrait
+{
+	
+}
+
+.paysage
+{
+	
+}
+
+#login
+{
+	border-right:1px solid black;
+}
+
+#login:hover
+{
+	background-color:#c4E4FF;
+}
+
+footer {
+	
+	text-align: center;
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	background-color: #CBC2ED;
+}
+
+#menu, #slide {
+	background-color: #EDABB7;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+#nav_content{
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#menu {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ .item, .item_active{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#carouselA{
+	margin-left: auto;
+	margin-right: auto;
+}
+.center-block{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

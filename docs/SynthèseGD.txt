@@ -1,0 +1,17 @@
+﻿<?php
+	header("Content-type: image/png");
+	$image = imagecreate(198,425); // Les dimensions de la carte complète
+	imagestring($image, 2, $x, $y, $texte_a_ecrire, $couleur);
+	/*
+	* $image, c'est notre image que nous avons créée.
+	* 2, c'est la taille de police (1 = très petit, 5 = très grand)
+	* $x, c'est la coordonnée x de la zone de texte
+	* $y, c'est la coordonnée y de la zone de texte
+	* $texte_a_ecrire, c'est le texte à écrire (de la carte)
+	* $couleur, c'est la couleur.
+	* INFO: $couleur = imagecolorallocate($image, r, v, b);
+	*/
+	imagepng($image); // L'image s'affiche
+
+	// Pour créer des formes, c'est faisable aussi, mais pas nécessaire.
+?>
