@@ -3,7 +3,7 @@
 	
 	class RegisterManager extends \W\Manager\Manager
 	{
-		protected $table = 'users';
+		protected $table = 'wusers';
 		
 		protected $primaryKey;
 		

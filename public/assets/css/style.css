@@ -1,7 +1,21 @@
+@font-face {
+	src: url("../fonts/HennyPenny-Regular.otf");
+	font-family: Penny;
+}
+
+@font-face {
+	src: url("../fonts/Blokletters-Balpen.ttf");
+	font-family: Blok;
+}
+
 body
 {
-	background-color:#EDABB7;
+	/*background-color:#EDABB7;*/
+	/*background-image: url(images/fondciel.jpg);*/
 	margin: 0;
+	font-family: Penny;
+	padding-top: 70px;
+
 }
 label
 {
@@ -14,6 +28,9 @@ header
 	font-size: 36px;
 	text-align: center;
 	line-height: 100px;
+	font-family: Blok;
+/*	border-top: 8px solid #999999;
+	border-bottom: 8px solid #999999;*/
 }
 header p
 {
@@ -24,6 +41,7 @@ li
 	text-decoration: none;
 	display: inline-block;
     padding: 10px;
+    font-family: Blok;
 }
 .bienvenue
 {
@@ -32,9 +50,17 @@ li
 	margin: auto;
 }
 
-input [type=radio]
+a {
+	font-family: Blok;
+}
+
+input, textarea {
+	font-family: Blok;
+}
+
+.radio
 {
-	display:none;
+	font-family: Blok;
 }
 
 .selected
@@ -45,6 +71,7 @@ input [type=radio]
 .carte
 {
 	padding:5px;
+	height:350px;
 }
 
 .carte:hover
@@ -66,26 +93,35 @@ input [type=radio]
 
 .paysage
 {
-	
 }
 
 #login
 {
-	border-right:1px solid black;
+	/*border-right:1px solid black;*/
 }
 
 #login:hover
 {
-	background-color:#c4E4FF;
+	/*background-color:#c4E4FF;*/
 }
 
-footer {
-	
+footer 
+{
+	border-top: 8px solid #CBA2DD;
 	text-align: center;
 	position:fixed;
 	bottom:0px;
 	width:100%;
+	height: 9em;
 	background-color: #CBC2ED;
+	z-index: -100;
+	font-family: Blok;
+}
+
+#cigogneFooter {
+	position: relative;
+	top: -175px;
+	opacity: 0.6;
 }
 
 #menu, #slide {
@@ -93,18 +129,21 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	font-family: Blok;
 }
 
 
 #nav_content{
 	margin-left: auto;
 	margin-right:auto;
+	font-family: Blok;
 }
 
 #menu {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	font-family: Blok;
 }
 
  .item, .item_active{
@@ -113,12 +152,79 @@ footer {
 	margin-right: auto;
 }
 
-#carouselA{
-	margin-left: auto;
-	margin-right: auto;
+#carouselvoeux{
+	margin-left: 20%;
+	margin-right: 20%;
 }
 .center-block{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#imprimer
+{
+	margin-top: 20%;
+	margin-left: 25%;
+
+}
+#impression
+{
+	margin-top: 10%;
+}
+#VersionImprimable
+{
+	display:none;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+#caro{
+	width: 50%;
+	z-index: 82;
+}
+carouselvoeux
+{
+	width: 450px;
+}
+
+header
+{
+	margin-bottom:50px;
+	font-family: Blok;
+}
+
+.img_admin
+{
+	height:80px;
+	width:60px;
+}
+
+table, tr, td, th
+{
+	border-radius:5px;
+	padding:3px;
+	margin-bottom:10px;
+	font-family: Blok;
+}
+
+#error { /* Pages d'erreur 403/404 personnalisées */
+	font-family: Blok;
+}
+
+#form_addCard, select, #myModalLabel {
+	font-family: Blok;	
 }

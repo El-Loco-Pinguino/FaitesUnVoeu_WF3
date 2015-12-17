@@ -6,26 +6,7 @@
 *									*
 ************************************/
 $this->start('main_content'); 
-?>
 
-<div class="form">
-<form method="post" action="<?= $this->url('registerAdd'); ?>">
-<p>
-	<input type="text" name="username" placeholder="Identifiant">
-</p>
-<p>
-    <input type="password" name="password" placeholder="Mot de passe">
-</p>
-<p>
-    <input type="text" name="email" placeholder="Adresse mail">
-</p>
-
-<p><input type="submit" value="S'enregistrer"></p>
-</form>
-
-</div>
-
-<?php 
 $this->stop('main_content');
 
 /************************************

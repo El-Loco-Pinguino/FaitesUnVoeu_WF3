@@ -13,7 +13,7 @@ $(document).ready(function()
 	//Selectionne la première carte 
 	$('.carte:first').click();
 	
-	//Formulaire de repmplissage des données de la carte
+	//Formulaire de repmplissage des données de la carte => naissance.php
 	$('#formCreateCard').submit(function(event)
 	{
 		//On empèche l'envoie du formulaire et donc le rafraichissement de la pages
@@ -28,15 +28,7 @@ $(document).ready(function()
 				//On renvoie les informations en JSON
 				dataType:"JSON",
 				//On envoie les données du formulaire et de la carte selectionnée
-				data:
-				{
-					firstname:$('[name=firstname]').val(),
-					carte:$('[name=carte]').val(),
-					size:$('[name=size]').val(),
-					weight:$('[name=weight]').val(),
-					baby:$('[name=baby]').val(),
-					sex:$('[name=sex]:checked').val()
-				},
+				data:$(this).serialize(),
 				//On utilise la method GET
 				method:"GET",
 				//Functuion executer quand le fichier a été trouvé
@@ -45,9 +37,9 @@ $(document).ready(function()
 					//Si il y a une carte selectionnée
 					if($('.selected').length > 0)
 					{
-						//On affiche le resultat dans une fenetre modal Jquery UI
+						//On affiche le resultat dans une fenetre modal Jquery UI						
 						$('#dialog').html("<img src='/FaitesUnVoeu_WF3/public/showCards?firstname="+Data['firstname']+"&size="+Data['size']+"&weight="+Data['weight']+"&baby="+Data['baby']+"&carte="+Data['carte']+"&sex="+Data['sex']+"'>").attr('title', 'Votre selection').dialog();
-						
+
 					}
 					else
 					{
@@ -67,5 +59,58 @@ $(document).ready(function()
 				}
 			}
 		);
+		$('#VersionImprimable').show();
 	});
+	
+	
+	//contacts
+	
+	$('#form_contact').submit(function(event)
+	{
+		event.preventDefault();
+		$.ajax
+		(
+			{
+				url:"/FaitesUnVoeu_WF3/public/addcontacts",
+				data: $('#form_contact').serialize(),
+				dataType:"JSON",
+				method:"POST",
+				success: function(Data)
+				{
+					
+				},
+				error:function()
+				{
+					
+				},
+				complete: function()
+				{
+					
+				}
+				
+			}
+		)
+	});
+	
+	$('#btn-submitcontact').confirm
+	(
+		{
+			text: "&Ecirc;tes vous s&ucirc;r de vouloir envoyer ce message &agrave; un administrateur ?",
+			title: "Confirmation requise",
+			confirm: function(button) 
+			{
+				$('#form_contact').submit();
+			},
+			cancel: function(button) 
+			{
+				
+			},
+			confirmButton: "Oui",
+			cancelButton: "Non",
+			post: true,
+			confirmButtonClass: "btn-danger",
+			cancelButtonClass: "btn-default",
+			dialogClass: "modal-dialog modal-lg" // Bootstrap classes for large modal
+		}
+	);	
 })

@@ -1,0 +1,29 @@
+@media print
+{
+	.no-padding > [class*='col-'] 
+	{
+		margin: 0;
+		padding: 0;
+	}
+	.imprimButton,.navbar,.modal
+	{
+		display:none;
+	}
+	
+	header,footer
+	{
+		display:none;
+	}
+
+	img
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		
+		height: 12cm;
+		width: 8cm;
+	}
+	
+
+}

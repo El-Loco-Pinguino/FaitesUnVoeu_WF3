@@ -4,7 +4,6 @@
 	class AdminManager extends \W\Manager\Manager
 	{
 		protected $table = 'users';
-		protected $table = 'naissances';
 		
 		protected $primaryKey;
 		
@@ -14,7 +13,6 @@
 			// récupération du singleton de connexion
 			$this->dbh = \W\Manager\ConnectionManager::getDbh();
 		}
-
 	}
 
 ?>

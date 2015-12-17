@@ -24,16 +24,16 @@ class RegisterController extends Controller
 		$util = new \Manager\RegisterManager();
 		// création d'un tableau contenant les infos à ajouter.
 		// le mot de passe est crypté avec password_hash
-		$newUtil = array(
+		$newUtil = array
+		(
 			'username' => $this->e($_POST['username']),
 			'password' => password_hash(htmlentities($_POST['password']), PASSWORD_DEFAULT),
-			'email' => htmlentities($_POST['email']),
+			'email' => $this->e($_POST['email']),
 			'role' => "Membre" // Groupe par défaut, allowTo pour attribuer des privilèges importants !
-			);
+		);
 		// ajout de l'utilisateur
 		// le strip_tag est activé par défaut
 		$util->insert($newUtil);
-		session_start();
 		
 		// retour à l'accueil
 		$this->redirectToRoute('home');
